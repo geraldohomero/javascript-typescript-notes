@@ -20,3 +20,7 @@ console.log(umaString.slice(-5));
 console.log(umaString.slice(-5, -1)); //pega o final da string e vai até o -1
 console.log(umaString.substring(umaString.length - 5, umaString.length - 1)); //muito mais código
 console.log(umaString.split(' ', 3)); //separa a string em um array
+console.log(umaString.split('r'));
+console.log(umaString.split(' '));
+console.log(umaString.toUpperCase());
+console.log(umaString.toLowerCase());
