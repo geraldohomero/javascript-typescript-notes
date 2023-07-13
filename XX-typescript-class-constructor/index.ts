@@ -12,5 +12,8 @@ class Person {
     }
   }
   
-  let alice = new Person("Alice", 25); 
-  alice.greet(); 
+  let gersilayne = new Person("Gersilayne", 25);
+  gersilayne.greet();
+
+  let wellersiano = new Person("Wellersiano", 25);
+  wellersiano.greet();
