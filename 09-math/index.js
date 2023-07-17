@@ -15,4 +15,4 @@ console.log(Math.PI); // PI
 console.log(Math.pow(2, 10)); // 2 elevado a 10
 console.log(2 ** 10); // 2 elevado a 10
 console.log(100 / 0); // Infinity
-console.log(100 / 0.000000...)
+console.log(100 / 0.000000)
