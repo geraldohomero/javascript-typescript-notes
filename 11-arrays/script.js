@@ -58,3 +58,7 @@ console.log(alunos.slice(0, -1)); // [ 'Geraldilson', 'Maria', 'João', 'Grudine
 
 console.log(typeof alunos); // object
 console.log(alunos instanceof Array); // true
+
+for (let i = 0; i < alunos.length; i++) {
+    console.log(alunos[i]); 
+}
