@@ -19,7 +19,6 @@ class Person {
   
   let gersilayne = new Person("Gersilayne", 25);
   gersilayne.greet();
-
   let wellersiano = new Person("Wellersiano", 25);
   wellersiano.greet();
 ```
