@@ -1,16 +1,16 @@
 document.getElementById('formulario').addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent the form from being submitted
+    e.preventDefault(); 
   
-    var peso = document.getElementById('peso').value; // Get the weight
-    var altura = document.getElementById('altura').value; // Get the height
+    var peso = document.getElementById('peso').value; //pega peso e altura
+    var altura = document.getElementById('altura').value;
   
-    // Convert height from cm to m
+    // Converte altura de cm para m
     altura = altura / 100;
   
-    // Calculate the BMI
+
     var imc = peso / (altura * altura);
   
-    // Determine the obesity grade
+
     var grade;
     if (imc < 18.5) {
       grade = 'Abaixo do peso';
@@ -26,6 +26,6 @@ document.getElementById('formulario').addEventListener('submit', function(e) {
       grade = 'Obesidade grau 3';
     }
   
-    // Display the result
+    //Mostra resultado
     document.getElementById('resultado').innerHTML = 'Seu IMC é: ' + imc.toFixed(2) + '. ' + grade;
   });
