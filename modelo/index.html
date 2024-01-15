@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/modelo/assets/css/style.css">
-    <title>Document</title>
-</head>
-<body>
-<script src="/modelo/assets/js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <section class="container">
+      <h1>Calculadora IMC</h1>
+      <p>
+        O Índice de Massa Corporal (IMC) é uma medida internacional usada para
+        calcular se uma pessoa está no peso ideal. Desenvolvido pelo polímata
+        Lambert Quételet no fim do século XIX, trata-se de um método fácil e
+        rápido para a avaliação do nível de gordura de cada pessoa, sendo, por
+        isso, um preditor internacional de obesidade adotado pela Organização
+        Mundial da Saúde (OMS).
+      </p>
+
+
+      <h2>Como interpretar o resultado do IMC</h2>
+      <p>
+        O resultado do IMC indica o grau de obesidade, podendo indicar:
+      </p>
+      <ul>
+        <li>
+          Magreza, menor que 18,5;
+        </li>
+        <li>
+          Normal, entre 18,5 e 24,9;
+        </li>
+        <li>
+          Sobrepeso, entre 24,9 e 30;
+        </li>
+        <li>
+          Obesidade grau I, entre 30 e 34,9;
+        </li>
+        <li>
+          Obesidade grau II, entre 35 e 39,9;
+        </li>
+        <li>
+          Obesidade grau III, maior que 40 
+        </li>
+      </ul>
+      <form action="" id="formulario" method="POST">
+        <label for="peso"> Peso (kg)</label>
+        <input type="number" id="peso" name="peso" placeholder="Ex: 80"/>
+
+        <label for="altura"> Altura (centímetros)</label>
+        <input type="number" id="altura" name="altura" placeholder="Ex: 177" />
+
+        <button type="submit">Calcular</button>
+        <p id="resultado"> </p>
+      </form>
+    </section>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
