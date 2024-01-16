@@ -1,31 +1,42 @@
-document.getElementById('formulario').addEventListener('submit', function(e) {
-    e.preventDefault(); 
-  
-    var peso = document.getElementById('peso').value; //pega peso e altura
-    var altura = document.getElementById('altura').value;
-  
-    // Converte altura de cm para m
-    altura = altura / 100;
-  
+const form = document.querySelector('#formulario');
 
-    var imc = peso / (altura * altura);
-  
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const inputPeso = e.target.querySelector('#peso');
+    const inputAltura = e.target.querySelector('#altura');
 
-    var grade;
-    if (imc < 18.5) {
-      grade = 'Abaixo do peso';
-    } else if (imc < 24.9) {
-      grade = 'Peso normal';
-    } else if (imc < 29.9) {
-      grade = 'Sobrepeso';
-    } else if (imc < 34.9) {
-      grade = 'Obesidade grau 1';
-    } else if (imc < 39.9) {
-      grade = 'Obesidade grau 2';
-    } else {
-      grade = 'Obesidade grau 3';
+    const peso = Number(inputPeso.value);
+    const altura = Number(inputAltura.value);
+
+    if (!peso) {
+        setResultado('Peso inválido', false); 
+        return;
     }
-  
-    //Mostra resultado
-    document.getElementById('resultado').innerHTML = 'Seu IMC é: ' + imc.toFixed(2) + '. ' + grade;
-  });
+
+    if (!altura) {
+        setResultado('Altura inválida', false);
+        return;
+    }
+
+    const imc = getImc(peso, altura);
+    console.log(imc);
+});
+
+function getImc (peso, altura) {
+    const imc = peso / altura ** 2;
+    return imc.toFixed(2);
+}
+
+function criaParagrafo () {
+    const p = document.createElement('p');
+    return p;
+}
+
+function setResultado (msg, isValid) {
+    const resultado = document.querySelector('#resultado');
+    resultado.innerHTML = '';
+
+    const p = criaParagrafo();
+    p.innerHTML = msg;
+    resultado.appendChild(p)
+}
