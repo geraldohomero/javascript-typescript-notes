@@ -87,7 +87,60 @@ function getDiaSemanaTexto(diaSemana) {
 
 h1.innerHTML = `${getDiaSemanaTexto(data.getDay())}, ${data.getDate()} de ${getMesTexto(data.getMonth())} de ${data.getFullYear()}`;
 h2.innerHTML = `${zeroAEsquerda(data.getHours())}:${zeroAEsquerda(data.getMinutes())}:${zeroAEsquerda(data.getSeconds())}`;
+ 
+Ou poderíamos ter feito assim:
+
+*/
+/* const h1 = document.querySelector('.container h1');
+function getDiaSemanaTexto(diaSemana) {
+    const diasSemana =
+        [
+            'domingo',
+            'segunda-feira',
+            'terça-feira',
+            'quarta-feira',
+            'quinta-feira',
+            'sexta-feira',
+            'sábado',
+        ];
+    return diasSemana[diaSemana];
+}
+
+function getNomeMes(numeroMes) {
+    const meses = [
+        'janeiro',
+        'fevereiro',
+        'março',
+        'abril',
+        'maio',
+        'junho',
+        'julho',
+        'agosto',
+        'setembro',
+        'novembro',
+        'dezembro',
+    ];
+    return meses[numeroMes];
+}
+
+function zeroAEsquerda(num) {
+    return num >= 10 ? num : `0${num}`;
+}
+
+function criaData(data) {
+    const nomeDia = data.getDay(diaSemana);
+    const nomeMes = data.getMonth(numeroMes);
+
+    return (
+        `${getDiaSemanaTexto(data.getDay())}, ${data.getDate()} de ${getNomeMes(data.getMonth())} de ${data.getFullYear()} ` +
+        `${zeroAEsquerda(data.getHours())}:${zeroAEsquerda(data.getMinutes())}:${zeroAEsquerda(data.getSeconds())}`
+    );
+}
+
+h1.innerHTML = criaData(data);
  */
+
+
 const h1 = document.querySelector(".container h1");
 const h2 = document.querySelector(".container h2");
 const data = new Date();
@@ -99,7 +152,6 @@ const opcoesHora = {
   timeStyle: "short",
 }; 
 */
-
 h1.innerHTML = data.toLocaleDateString("pt-BR", {
   dateStyle: "full",
 });
@@ -109,4 +161,3 @@ function getTime() {
     h2.innerHTML = data.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", second: "2-digit"});
     }
     setInterval(getTime, 1000);
-
