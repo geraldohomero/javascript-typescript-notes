@@ -1,3 +1,4 @@
+/* 
 const h1 = document.querySelector('.container h1');
 const h2 = document.querySelector('.container h2');
 const data = new Date();
@@ -86,4 +87,26 @@ function getDiaSemanaTexto(diaSemana) {
 
 h1.innerHTML = `${getDiaSemanaTexto(data.getDay())}, ${data.getDate()} de ${getMesTexto(data.getMonth())} de ${data.getFullYear()}`;
 h2.innerHTML = `${zeroAEsquerda(data.getHours())}:${zeroAEsquerda(data.getMinutes())}:${zeroAEsquerda(data.getSeconds())}`;
+ */
+const h1 = document.querySelector(".container h1");
+const h2 = document.querySelector(".container h2");
+const data = new Date();
+/* 
+const opcoesData = {
+  dateStyle: "full",
+};
+const opcoesHora = {
+  timeStyle: "short",
+}; 
+*/
+
+h1.innerHTML = data.toLocaleDateString("pt-BR", {
+  dateStyle: "full",
+});
+// a hora vai sempre ser atualizada a cada segundo
+function getTime() {
+    const data = new Date();
+    h2.innerHTML = data.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", second: "2-digit"});
+    }
+    setInterval(getTime, 1000);
 
