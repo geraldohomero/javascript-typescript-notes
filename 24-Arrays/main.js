@@ -28,4 +28,4 @@ const [,[,,seis]] = numeros2
 console.log(seis); // 6
 
 const [lista1, lista2, lista3] = numeros2;
-console.log(lista3[2]);
+console.log(lista3[2]); // 9
