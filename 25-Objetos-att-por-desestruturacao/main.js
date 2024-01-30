@@ -9,6 +9,7 @@ const pessoa = {
 
     }
 };
+
 //const nome = pessoa.nome; // atribuição normal
 //const { nome, sobrenome } = pessoa; // atribuição via desestruturação de duas propriedades
 const { nome } = pessoa; // atribuição via desestruturação 
