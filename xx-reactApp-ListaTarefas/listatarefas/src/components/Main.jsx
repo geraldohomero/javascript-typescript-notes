@@ -16,8 +16,8 @@ export default class Main extends Component {
   };
 
 
-  handleSubmit = (evento) => {
-    evento.preventDefault();
+  handleSubmit = (e) => {
+    e.preventDefault();
     const { tarefas } = this.state;
     let { novaTarefa } = this.state;
     
@@ -26,19 +26,32 @@ export default class Main extends Component {
     if (tarefas.indexOf(novaTarefa) !== -1) return;
 
     const novasTarefas = [...tarefas];
-    
+
     this.setState({
       tarefas: [...novasTarefas, novaTarefa],
     });
     this.setState({ novaTarefa: '' }); // limpa o input
   }   
 
-    handleChange = (evento) => {
+    handleChange = (e) => {
       this.setState({ 
-        novaTarefa: evento.target.value 
+        novaTarefa: e.target.value 
       });
   }
   
+  handleDelete = (e, index) => {
+    const { tarefas } = this.state;
+    const novasTarefas = [...tarefas];
+    novasTarefas.splice(index, 1);
+    
+    this.setState({ 
+      tarefas: [...novasTarefas] 
+    });
+  }
+
+  handleEdit = (e, index) => {
+    console.log('Edit', index)
+  }
   render() {
     const { novaTarefa, tarefas } = this.state;
 
@@ -57,12 +70,18 @@ export default class Main extends Component {
         </form>
 
         <ul className="tarefas">
-          {tarefas.map(tarefa => (
+          {tarefas.map((tarefa, index) => (
             <li key={tarefa}>
               {tarefa}
               <span>
-                <FaEdit className='edit'/>
-                <FaWindowClose className='delete'/>
+                <FaEdit 
+                  onClick={(e) => this.handleEdit(e, index)}
+                  className='edit'
+                />
+                <FaWindowClose 
+                  onClick={(e) => this.handleDelete(e, index)} 
+                  className='delete'
+                />
               </span>
               </li>
           ))}
