@@ -15,20 +15,23 @@ export default class Main extends Component {
     tarefas: [],
   };
 
-    handleSubmit = (e) => {
-      e.preventDefalt();
-      const { tarefas } = this.state;
-      let { novaTarefa } = this.state;
-      novaTarefa = novaTarefa.trim();
 
-      if (tarefas.indexOf(novaTarefa) !== -1) return;
+  handleSubmit = (evento) => {
+    evento.preventDefault();
+    const { tarefas } = this.state;
+    let { novaTarefa } = this.state;
+    
+    novaTarefa = novaTarefa.trim();
 
-      const novasTarefas = [...tarefas];
+    if (tarefas.indexOf(novaTarefa) !== -1) return;
 
-      this.setState({
-        tarefas: [...novasTarefas, novaTarefa],
-      });
-    }    
+    const novasTarefas = [...tarefas];
+    
+    this.setState({
+      tarefas: [...novasTarefas, novaTarefa],
+    });
+    this.setState({ novaTarefa: '' }); // limpa o input
+  }   
 
     handleChange = (evento) => {
       this.setState({ 
