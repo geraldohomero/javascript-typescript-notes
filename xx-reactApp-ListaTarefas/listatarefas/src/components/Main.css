@@ -12,43 +12,7 @@
   text-align: center;
 }
 
-.form {
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-}
-
-.form input[type="text"] {
-  flex: 1;
-  height: 40px;
-  padding: 0 20px;
-  background: #363636;
-  color: #fff;
-  border: 0;
-  font-size: 16px;
-  border-radius: 5px;
-}
-
-.form button[type="submit"] {
-  height: 40px;
-  padding: 0 20px;
-  margin-left: 10px;
-  background: #a263f5;
-  color: #fff;
-  font-size: 16px;
-  border: 0;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.form button[type="submit"]:hover {
-  background: #b300ff;
-}
 
 .tarefas {
   margin-top: 30px;
