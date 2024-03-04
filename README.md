@@ -1,6 +1,6 @@
 # JavaScript & TypeScript Notes
 
-Exercícios e anotações sobre JavaScript, TypeScript, React.js, Next.js, SQL, dentre outros.
+Exercícios e anotações sobre JavaScript, TypeScript, Vue.js, React.js, Next.js, SQL, dentre outros.
 
 
 ```typescript
