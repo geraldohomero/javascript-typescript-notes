@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { FaEdit, FaWindowClose } from 'react-icons/fa';
+import './Tarefas.css';
 
 export default function Tarefas({ tarefas, handleEdit, handleDelete}) {
   return (
