@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+h1 {
+  font-size: 2em;
+  margin: 0.5em 0;
+  color: aqua;
+}
