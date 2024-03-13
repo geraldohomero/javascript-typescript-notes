@@ -13,6 +13,5 @@ const TemplateExpressions = () => {
       <p>Do you work at {data.company}?</p>
     </div >
   )
-
 }
 export default TemplateExpressions;
