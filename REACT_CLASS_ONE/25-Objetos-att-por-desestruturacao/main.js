@@ -25,6 +25,5 @@ const { endereco: { rua: r = 'valor padrão', numero }} = pessoa;
 console.log(r, numero);
 
 // resto
-
 const { nome: n, ...resto } = pessoa;
 console.log('resto', resto); // exibe o resto, menos o nome (n)
