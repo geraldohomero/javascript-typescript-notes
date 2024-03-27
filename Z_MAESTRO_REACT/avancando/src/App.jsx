@@ -1,11 +1,16 @@
-import { useState } from 'react'
-import './App.css'
 
+import './App.css'
+import Wallpaper from './assets/wallpaper.jpeg'
 function App() {
 
   return (
     <div>
-      <h1>Avançando</h1>
+      <div>
+        <h1>Avançando</h1>
+      </div>
+      <div>
+        <img src={Wallpaper} alt="Wallpaper" />
+      </div>
     </div>
   )
 }
