@@ -1,6 +1,7 @@
 import './App.css'
 import ManageData from './components/ManageData'
 import ListRender from './components/ListRender'
+import ConditionalRender from './components/ConditionalRender'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <h1>Hooks</h1>
       <ManageData />
       <ListRender />
+      <ConditionalRender />
     </div>
   )
 }
