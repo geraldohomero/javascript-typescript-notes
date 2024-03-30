@@ -5,14 +5,14 @@ import ConditionalRender from './components/ConditionalRender'
 import ShowUserName from './components/ShowUserName'
 
 function App() {
-
+  const name = 'Jorvinelson'
   return (
     <div>
       <h1>Hooks</h1>
       <ManageData />
       <ListRender />
       <ConditionalRender />
-      <ShowUserName />
+      <ShowUserName name={name} />
     </div>
   )
 }

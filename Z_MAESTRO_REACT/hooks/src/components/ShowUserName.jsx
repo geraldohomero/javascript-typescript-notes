@@ -1,8 +1,8 @@
 
-const ShowUserName = () => {
+const ShowUserName = (props) => {
   return (
     <div>
-      <h1>O nome do usuário é: </h1>
+      <h1>O nome do usuário é: {props.name}</h1>
     </div>
   )
 }
