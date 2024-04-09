@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 const ListRender = () => {
+  
   const [list] = useState(["Wellerson", "Joberson", "Killerson", "Emmanuellerson"])
 
   const [users, setUsers] = useState([
@@ -26,7 +27,6 @@ const ListRender = () => {
           <li key={index}>{item}</li>
         ))}
       </ul>
-
       <ul>
         {users.map((user => (
           <li key={user.id}>
