@@ -4,6 +4,7 @@ import ListRender from './components/ListRender'
 import ConditionalRender from './components/ConditionalRender'
 import ShowUserName from './components/ShowUserName'
 import CarDetails from './components/CarDetails'
+import Fragments from './components/Fragments'
 
 function App() {
   const name = 'Jorvinelson';
@@ -38,6 +39,9 @@ function App() {
           color={car.color}
           newCar={car.newCar} />
       ))}
+      {/* fragment */}
+      <Fragments propFragment="teste" />
+
     </div>
   )
 }
