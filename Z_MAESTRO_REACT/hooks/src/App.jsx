@@ -6,7 +6,16 @@ import ShowUserName from './components/ShowUserName'
 import CarDetails from './components/CarDetails'
 
 function App() {
-  const name = 'Jorvinelson'
+  const name = 'Jorvinelson';
+
+  const cars = [
+    { id: 1, brand: "Ferrari", km: 1000, color: "red", newCar: true },
+    { id: 2, brand: "Porsche", km: 2000, color: "yellow", newCar: false },
+    { id: 3, brand: "Lamborghini", km: 3000, color: "green", newCar: true },
+    { id: 4, brand: "Aston Martin", km: 4000, color: "blue", newCar: false },
+    { id: 5, brand: "Bugatti", km: 5000, color: "black", newCar: true }
+  ]
+
   return (
     <div>
       <h1>Hooks</h1>
@@ -20,7 +29,15 @@ function App() {
       {/* reaproveitando componentes */}
       <CarDetails brand="Ford" km={120000} color="preto" newCar={false} />
       <CarDetails brand="Chevrolet" km={0} color="prata" newCar={true} />
-
+      {/* loop em array de objetos */}
+      {cars.map((car) => (
+        // eslint-disable-next-line react/jsx-key
+        <CarDetails
+          brand={car.brand}
+          km={car.km}
+          color={car.color}
+          newCar={car.newCar} />
+      ))}
     </div>
   )
 }

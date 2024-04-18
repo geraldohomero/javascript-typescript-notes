@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/prop-types
 const CarDetails = ({ brand, km, color, newCar }) => {
   return (
     <div>
