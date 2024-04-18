@@ -1,4 +1,5 @@
 import './App.css'
+import { useState } from 'react';
 import ManageData from './components/ManageData'
 import ListRender from './components/ListRender'
 import ConditionalRender from './components/ConditionalRender'
@@ -7,6 +8,8 @@ import CarDetails from './components/CarDetails'
 import Fragments from './components/Fragments'
 import Container from './components/Container'
 import ExecuteFunction from './components/ExecuteFunction'
+import StateLift from './components/StateLift'
+import ChangeMessageStateLift from './components/ChangeMessageStateLift'
 
 function App() {
   const name = 'Jorvinelson';
@@ -19,9 +22,17 @@ function App() {
     { id: 5, brand: "Bugatti", km: 5000, color: "black", newCar: true }
   ]
 
+
+
   function showMessage() {
     console.log("Executa componente pai!")
   }
+
+  const [message, setMessage] = useState("");
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  };
 
 
   return (
@@ -60,6 +71,9 @@ function App() {
       </Container>
       {/* chexecutar função */}
       <ExecuteFunction myFunction={showMessage} />
+      {/* state lift */}
+      <StateLift msg={message} />
+      <ChangeMessageStateLift handleMessage={handleMessage} />
 
     </div>
   )
