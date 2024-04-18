@@ -10,7 +10,7 @@ import Container from './components/Container'
 import ExecuteFunction from './components/ExecuteFunction'
 import StateLift from './components/StateLift'
 import ChangeMessageStateLift from './components/ChangeMessageStateLift'
-
+import UserDetails from './components/UserDetails'
 function App() {
   const name = 'Jorvinelson';
 
@@ -33,6 +33,14 @@ function App() {
   const handleMessage = (msg) => {
     setMessage(msg);
   };
+
+  const users = [
+    { id: 1, name: "Jorvinelson", job: "Programador", age: 30 },
+    { id: 2, name: "Maria", job: "Designer", age: 25 },
+    { id: 3, name: "João", job: "Estudante", age: 12 },
+    { id: 4, name: "José", job: "Médico", age: 40 },
+    { id: 5, name: "Ana", job: "Advogada", age: 45 }
+  ]
 
 
   return (
@@ -74,7 +82,14 @@ function App() {
       {/* state lift */}
       <StateLift msg={message} />
       <ChangeMessageStateLift handleMessage={handleMessage} />
-
+      {users.map((user) => (
+        <UserDetails
+          key={user.id}
+          name={user.name}
+          job={user.job}
+          age={user.age}
+        />
+      ))}
     </div>
   )
 }
