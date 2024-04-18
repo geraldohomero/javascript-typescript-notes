@@ -1,4 +1,6 @@
 
+import PropTypes from 'prop-types';
+
 const UserDetails = ({ age, name, job }) => {
   return (
     <div>
@@ -13,5 +15,11 @@ const UserDetails = ({ age, name, job }) => {
     </div>
   )
 }
+
+UserDetails.propTypes = {
+  age: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  job: PropTypes.string.isRequired,
+};
 
 export default UserDetails
